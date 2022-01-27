@@ -6,7 +6,7 @@ const letters = document.getElementsByClassName('letter');
 const show = document.getElementsByClassName('show');
 const overlayScreen = document.getElementById('overlay');
 const title = document.querySelector('.title');
-const ul = document.querySelector("#phrase ul")
+const ul = document.querySelector("#phrase ul");
 
 let missedAnswers = 0;
 var phrases = [
@@ -41,7 +41,7 @@ function addPhrasesToDisplay(arr) {
             li.classList.add("letter");
         }
     }
-};
+}
 
 addPhrasesToDisplay(randomPhrase);
 
@@ -82,7 +82,7 @@ function checkWin() {
         overlayScreen.className = 'win'; 
         title.textContent = "You have won!";
         overlayScreen.style.display = 'flex';
-        btnReset.textContent = "Restart the game"
+        btnReset.textContent = "Restart the game";
         restart();
     } else if (missedAnswers >= 5) {
         overlayScreen.className = 'lose'; 
